@@ -17,8 +17,8 @@ import scala.concurrent.duration._
  * @param exec We need an `ExecutionContext` to execute our
  * asynchronous code.
  */
-@Singleton
-class AsyncController @Inject() (actorSystem: ActorSystem)(implicit exec: ExecutionContext) extends Controller {
+
+class AsyncController(actorSystem: ActorSystem)(implicit exec: ExecutionContext) extends Controller {
 
   /**
    * Create an Action that returns a plain text message after a delay
